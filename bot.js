@@ -6,7 +6,7 @@ function getRandomInt(max) {
   return (Math.floor(Math.random() * Math.floor(max)) + 1);
 }
 
-function roll(user, count, die) {
+function roll(message, user, count, die) {
   message.reply(user + ' is rolling ' + count + 'd' + die);
   var total = 0;
   var diceArr = new Array(count);
@@ -30,7 +30,7 @@ client.on('message', message => {
   var user = message.member.displayName;
   switch (message.content) {
     case "!d4":
-      roll(user, 1, 4);
+      roll(message, user, 1, 4);
       break;
     case "!d6":
       message.reply('Rolling D6');
