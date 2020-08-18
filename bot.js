@@ -22,7 +22,7 @@ client.on("message", message => {
     dBool = input.includes("d");
     if (dBool) {
       dString = input.substring(0, input.indexOf("d"));
-      console.log("dString | " = dString);
+      console.log("dString | " + dString);
     }
   }
 
