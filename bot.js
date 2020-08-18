@@ -7,8 +7,7 @@ client.on('ready', () => {
 })
 
 client.on('message', message => {
-  var prefix = '!';
-  if (message.content === prefix + 'd20') {
+  if (message.content === '!d20') {
     message.reply('Rolling D20');
   }
 });
