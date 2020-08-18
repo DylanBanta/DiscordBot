@@ -1,13 +1,13 @@
-const Discord = require('discord.js');
+const Discord = require("discord.js");
 const client = new Discord.Client();
-const config = require('./config.json');
+const config = require("./config.json");
 
 function getRandomInt(max) {
   return (Math.floor(Math.random() * Math.floor(max)) + 1);
 }
 
 function roll(message, user, count, die) {
-  message.reply(user + ' is rolling ' + count + 'd' + die);
+  message.reply(user + " is rolling " + count + "d" + die);
   var total = 0;
   var diceArr = new Array(count);
 
@@ -19,21 +19,25 @@ function roll(message, user, count, die) {
     total += diceArr[j];
   }
 
-  message.reply(user + ' rolled ' + diceArr.toString() + ' for a total of ' + total);
+  message.reply(user + " rolled " + diceArr.toString() + " for a total of " + total);
 }
 
-client.on('ready', () => {
-  console.log('D&D Bot Has Rolled for Initiative'); //D&D bot is on
+client.on("ready", () => {
+  console.log("D&D Bot Has Rolled for Initiative"); //D&D bot is on
 })
 
-client.on('message', message => {
+client.on("message", message => {
   var user = message.member.displayName;
+  var prefix = config.prefix;
+
   switch (message.content) {
-    case "!d4":
+    case prefix + "d4":
+    case prefix + "1d4":
       roll(message, user, 1, 4);
       break;
-    case "!d6":
-      message.reply('Rolling D6');
+    case "d6":
+    case "1d6":
+      message.reply("Rolling D6");
       roll = getRandomInt(6);
       console.log("roll | " + roll);
   }
