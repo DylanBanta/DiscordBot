@@ -6,18 +6,22 @@ function getRandomInt(max) {
   return (Math.floor(Math.random() * Math.floor(max)) + 1);
 }
 
+function roll(count, die) {
+  message.reply('Rolling ' + count + ' d' + die);
+  roll = getRandomInt(4);
+  console.log("roll | " + roll);
+}
+
 client.on('ready', () => {
   console.log('D&D Bot Has Rolled for Initiative'); //D&D bot is on
 })
 
 client.on('message', message => {
-  var roll;
-  console.log("config.prefix | " + config.prefix);
+  var nick = message.member.displayName;
+  console.log("nick | " + nick);
   switch (message.content) {
     case "!d4":
-      message.reply('Rolling D4');
-      roll = getRandomInt(4);
-      console.log("roll | " + roll);
+      //roll(1, 4);
       break;
     case "!d6":
       message.reply('Rolling D6');
