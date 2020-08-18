@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const config = require('./config.json');
 
 function getRandomInt(max) {
   return (Math.floor(Math.random() * Math.floor(max)) + 1);
