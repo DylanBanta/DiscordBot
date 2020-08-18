@@ -12,7 +12,8 @@ client.on("message", message => {
   var prefix = config.prefix;
   var input = message.content;
   var dBool = false;
-  var dString;
+  var dCount;
+  var dVal;
 
   console.log("input | " + input);
 
@@ -21,8 +22,10 @@ client.on("message", message => {
     input = input.split(prefix)[1];
     dBool = input.includes("d");
     if (dBool) {
-      dString = input.substring(0, input.indexOf("d"));
-      console.log("dString | " + dString);
+      dCount = input.substring(0, input.indexOf("d"));
+      dVal = input.slice(input.lastIndexOf('/') + 1);
+      console.log("dCount | " + dCount);
+      console.log("dVal | " + dVal);
     }
   }
 
