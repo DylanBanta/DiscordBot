@@ -9,6 +9,9 @@ client.on('ready', () => {
 client.on('message', message => {
   if (message.content === '!d20') {
     message.reply('Rolling D20');
+    var roll = Math.random(0, 3);
+    roll = math.floor(roll);
+    console.log(roll);
   }
 });
 
