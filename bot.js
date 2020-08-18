@@ -19,25 +19,25 @@ function roll(user, count, die) {
     total += diceArr[j];
   }
 
-  message.reply(user + ' rolled ' + diceArr.toString() + ' for a total of ' + total;
+  message.reply(user + ' rolled ' + diceArr.toString() + ' for a total of ' + total);
+}
+
+client.on('ready', () => {
+  console.log('D&D Bot Has Rolled for Initiative'); //D&D bot is on
+})
+
+client.on('message', message => {
+  var user = message.member.displayName;
+  switch (message.content) {
+    case "!d4":
+      roll(user, 1, 4);
+      break;
+    case "!d6":
+      message.reply('Rolling D6');
+      roll = getRandomInt(6);
+      console.log("roll | " + roll);
   }
+});
 
-  client.on('ready', () => {
-    console.log('D&D Bot Has Rolled for Initiative'); //D&D bot is on
-  })
-
-  client.on('message', message => {
-    var user = message.member.displayName;
-    switch (message.content) {
-      case "!d4":
-        roll(user, 1, 4);
-        break;
-      case "!d6":
-        message.reply('Rolling D6');
-        roll = getRandomInt(6);
-        console.log("roll | " + roll);
-    }
-  });
-
-  //Logs in
-  client.login(process.env.BOT_TOKEN);
+//Logs in
+client.login(process.env.BOT_TOKEN);
