@@ -1,5 +1,5 @@
 {
-  "name": "Dungeons&Discord",
+  "name": "DungeonsAndDiscordBot",
   "description": "A bot with various D&D features",
   "version": "0.0.1",
   "main": "bot.js",
