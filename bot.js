@@ -11,6 +11,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
   var roll;
+  console.log("config.prefix | " + config.prefix);
   switch (message.content) {
     case "!d4":
       message.reply('Rolling D4');
