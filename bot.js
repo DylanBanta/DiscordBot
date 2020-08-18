@@ -13,4 +13,4 @@ client.on('message', message => {
   }
 });
 
-client.login(client.token);
+client.login(config.token);
