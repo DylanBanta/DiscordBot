@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 function getRandomInt(max) {
-  return Math.floor(Math.random() * Math.floor(max));
+  return (Math.floor(Math.random() * Math.floor(max)) + 1);
 }
 
 client.on('ready', () => {
@@ -11,10 +11,16 @@ client.on('ready', () => {
 
 client.on('message', message => {
   var roll;
-  if (message.content === '!d20') {
-    message.reply('Rolling D20');
-    roll = getRandomInt(20);
-    console.log("roll | " + roll);
+  switch (message.content) {
+    case "!d4":
+      message.reply('Rolling D4');
+      roll = getRandomInt(4);
+      console.log("roll | " + roll);
+      break;
+    case "1d6":
+      message.reply('Rolling D6');
+      roll = getRandomInt(6);
+      console.log("roll | " + roll);
   }
 });
 
