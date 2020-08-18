@@ -23,7 +23,8 @@ client.on("message", message => {
     dBool = input.includes("d");
     if (dBool) {
       dCount = input.substring(0, input.indexOf("d"));
-      dVal = input.slice(input.lastIndexOf('/') + 1);
+      dVal = input.slice(0, input.lastIndexOf("d") + 1);
+      dVal = dVal.slice(dVal.lastIndexOf("/") + 1);
       console.log("dCount | " + dCount);
       console.log("dVal | " + dVal);
     }
