@@ -17,7 +17,7 @@ client.on('message', message => {
       roll = getRandomInt(4);
       console.log("roll | " + roll);
       break;
-    case "1d6":
+    case "!d6":
       message.reply('Rolling D6');
       roll = getRandomInt(6);
       console.log("roll | " + roll);
