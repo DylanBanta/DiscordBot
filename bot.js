@@ -13,7 +13,7 @@ client.on('message', message => {
   var roll;
   if (message.content === '!d20') {
     message.reply('Rolling D20');
-    roll = Util.getRandomInt(20);
+    roll = getRandomInt(20);
     console.log("roll | " + roll);
   }
 });
