@@ -21,10 +21,8 @@ client.on("message", message => {
     input = input.split(prefix)[1];
     dBool = input.includes("d");
     if (dBool) {
-      dString = input.split("d");
-      for (var i = 0; i < dString.length; i++) {
-        console.log("dString[" + i + "] | " + dString[i]);
-      }
+      dString = input.substring(0, input.indexOf("d"));
+      console.log("dString | " = dString);
     }
   }
 
