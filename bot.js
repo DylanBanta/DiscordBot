@@ -33,7 +33,7 @@ client.on("message", message => {
     dVal = input.substring(input.lastIndexOf("d") + 1);
     console.log("dCount | " + dCount);
     console.log("dVal | " + dVal);
-    console.log("Dice.roll(dCount, val) | " + Dice.roll(dCount, val));
+    console.log("Dice.roll(dCount, dVal) | " + Dice.roll(dCount, dVal));
   }
 
   // switch (message.content) {
