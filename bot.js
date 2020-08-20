@@ -25,7 +25,7 @@ client.on("message", message => {
       dCount = input.substring(0, input.indexOf("d"));
       //dVal = input.slice(0, input.lastIndexOf("d") + 1);
       console.log("dVal1 | " + dVal);
-      dVal = input.substring(dVal.lastIndexOf("d") + 1);
+      dVal = input.substring(input.lastIndexOf("d") + 1);
       message.reply("dCount | " + dCount);
       message.reply("dVal | " + dVal);
       console.log("dCount | " + dCount);
