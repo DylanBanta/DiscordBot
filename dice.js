@@ -10,10 +10,7 @@ class Dice {
     for (var i = 0; i < count; i++) {
       arr.push(getRandom(val));
     }
-
-    for (var i = 0; i < arr.length; i++) {
-      total += arr[i];
-    }
+    return arr;
   }
 
-  module.exports = new Dice()
+  module.exports = new Dice();
