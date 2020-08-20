@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const config = require("./config.json");
-const Dice = require("tabletop-dice");
+const Dice = require("./dice.js");
 
 client.on("ready", () => {
   console.log("D&D Bot Has Rolled for Initiative"); //D&D bot is on
@@ -12,8 +12,7 @@ client.on("message", message => {
   var prefix = config.prefix;
   var input = message.content;
   var dBool = false;
-  var dCount;
-  var dVal;
+
 
   console.log("input | " + input);
 
@@ -21,16 +20,20 @@ client.on("message", message => {
     //Splits command after prefix. (input "!1" becomes "1");
     input = input.split(prefix)[1];
     dBool = input.includes("d");
-    if (dBool) {
-      dCount = input.substring(0, input.indexOf("d"));
-      //dVal = input.slice(0, input.lastIndexOf("d") + 1);
-      console.log("dVal1 | " + dVal);
-      dVal = input.substring(input.lastIndexOf("d") + 1);
-      message.reply("dCount | " + dCount);
-      message.reply("dVal | " + dVal);
-      console.log("dCount | " + dCount);
-      console.log("dVal | " + dVal);
+    if (dBool) { //TODO make sure to only call this when actually rolling a die
+      diceCommand(input);
     }
+  }
+
+  function diceCommand(input) {
+    var dCount;
+    var dVal;
+    dCount = input.substring(0, input.indexOf("d"));
+    //dVal = input.slice(0, input.lastIndexOf("d") + 1);
+    dVal = input.substring(input.lastIndexOf("d") + 1);
+    console.log("dCount | " + dCount);
+    console.log("dVal | " + dVal);
+    console.log("Dice.roll(dCount, val) | " + Dice.roll(dCount, val));
   }
 
   // switch (message.content) {
