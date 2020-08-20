@@ -24,6 +24,7 @@ client.on("message", message => {
     if (dBool) {
       dCount = input.substring(0, input.indexOf("d"));
       dVal = input.slice(0, input.lastIndexOf("d") + 1);
+      console.log("dVal1 | " + dVal);
       dVal = dVal.slice(dVal.lastIndexOf("d") + 1);
       message.reply("dCount | " + dCount);
       message.reply("dVal | " + dVal);
