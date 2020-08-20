@@ -26,14 +26,13 @@ client.on("message", message => {
   }
 
   function diceCommand(input) {
-    var dCount;
     var dVal;
-    dCount = input.substring(0, input.indexOf("d"));
-    //dVal = input.slice(0, input.lastIndexOf("d") + 1);
+    var dCount;
     dVal = input.substring(input.lastIndexOf("d") + 1);
-    console.log("dCount | " + dCount);
+    dCount = input.substring(0, input.indexOf("d"));
     console.log("dVal | " + dVal);
-    console.log("Dice.roll(dCount, dVal) | " + Dice.roll(dCount, dVal));
+    console.log("dCount | " + dCount);
+    console.log("Dice.roll(dCount, dVal) | " + Dice.roll(dVal, dCount));
   }
 
   // switch (message.content) {
