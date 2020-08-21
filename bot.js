@@ -23,7 +23,7 @@ client.on("message", message => {
     var input = input.split(prefix)[1];
 
     if (input == "Debug") {
-      Dbg.log("Test");
+      dlog("Test");
     }
 
     //Check for Dice Roll Command
