@@ -1,6 +1,6 @@
 class Dbg {
   dlog(data) {
-    var caller = dlog.caller.name;
+    var caller = this.caller.name;
     if (caller == null || caller == undefined || caller == "") {
       caller = "Unknown";
     }
