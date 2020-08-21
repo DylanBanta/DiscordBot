@@ -1,7 +1,8 @@
 const Discord = require("discord.js");
-const client = new Discord.Client();
+const Dbg = require("./debug.js");
+const Dice = require("tabletop-dice");
 const config = require("./config.json");
-let Dice = require("tabletop-dice");
+const client = new Discord.Client();
 
 client.on("ready", () => {
   console.log("D&D Bot Has Rolled for Initiative"); //D&D bot is on
@@ -19,26 +20,41 @@ client.on("message", message => {
 
   if (input.startsWith(prefix)) {
     //Splits command after prefix. (input "!1" becomes "1");
-    input = input.split(prefix)[1];
+    var input = input.split(prefix)[1];
+
+    if (input == "Debug") {
+      Dbg.log("Test");
+    }
+
+    //Check for Dice Roll Command
     dBool = input.includes("d");
     if (dBool) { //TODO make sure to only call this when actually rolling a die
-      var total = 0;
       dOutput = diceCommand(input);
       message.reply(dOutput);
     }
   }
 
+
+  //Acceptable Inputs
+  //!d4 !1d4 both result in rolling 1 4 sided die
+  //!2d4 results in an array containing the results of 2 d4
+  //!2d999 would roll 2 dice with 999 sides
   function diceCommand(input) {
-    var dVal;
-    var dCount;
-    var diceArr;
-    var total = 0;
-    var output;
-    dVal = input.substring(input.lastIndexOf("d") + 1);
-    dCount = input.substring(0, input.indexOf("d"));
+    var dVal; //number of sides on the die
+    var dCount; //number of dice to roll
+    var diceArr; //array of dVals for multiple rolls
+    var total = 0; //total of diceArr components added together
+    var output; //Output Message
+
+    //Find Dice Value And Count
+    dVal = input.substring(input.lastIndexOf("d") + 1); //Find last "d" in input, keeps value after
+    dCount = input.substring(0, input.indexOf("d")); //Find letter "d" in input, keeps value before
+
+    //If dCount isn't specified (input !d4, !d99, etc.) set to 1
     if (dCount == "" || dCount == undefined || dCount == null) {
       dCount = 1;
     }
+
     console.log("dVal | " + dVal);
     console.log("dCount | " + dCount);
 
