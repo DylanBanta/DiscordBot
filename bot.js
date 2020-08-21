@@ -28,11 +28,19 @@ client.on("message", message => {
   function diceCommand(input) {
     var dVal;
     var dCount;
+    var diceArr;
     dVal = input.substring(input.lastIndexOf("d") + 1);
     dCount = input.substring(0, input.indexOf("d"));
+    if (dCount == "" || dCount == undefined || dCount == null) {
+      dCount = 1;
+    }
     console.log("dVal | " + dVal);
     console.log("dCount | " + dCount);
-    console.log("Dice.roll(dCount, dVal) | " + Dice.roll(dVal, dCount));
+
+    diceArr = Dice.roll(dVal, dCount);
+    console.log("diceArr | " + diceArr);
+
+    return diceArr;
   }
 
   // switch (message.content) {
