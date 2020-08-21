@@ -12,6 +12,7 @@ client.on("message", message => {
   var prefix = config.prefix;
   var input = message.content;
   var dBool = false;
+  var dOutput;
 
 
   console.log("input | " + input);
@@ -21,7 +22,9 @@ client.on("message", message => {
     input = input.split(prefix)[1];
     dBool = input.includes("d");
     if (dBool) { //TODO make sure to only call this when actually rolling a die
-      diceCommand(input);
+      var total = 0;
+      dOutput = diceCommand(input);
+      message.reply(dOutput);
     }
   }
 
@@ -29,6 +32,8 @@ client.on("message", message => {
     var dVal;
     var dCount;
     var diceArr;
+    var total = 0;
+    var output;
     dVal = input.substring(input.lastIndexOf("d") + 1);
     dCount = input.substring(0, input.indexOf("d"));
     if (dCount == "" || dCount == undefined || dCount == null) {
@@ -40,7 +45,18 @@ client.on("message", message => {
     diceArr = Dice.roll(dVal, dCount);
     console.log("diceArr | " + diceArr);
 
-    return diceArr;
+    for (var i = 0; i < diceArr.length; i++) {
+      total += diceArr[i];
+    }
+
+    if (dCount == 1) {
+      output = " Rolled 1" + dVal + "and got a " + total;
+    }
+    else {
+      output = " Rolled " + dCount + "" + dVal + "and got " + diceArr + " for a total of " + total;
+    }
+
+    return output;
   }
 
   // switch (message.content) {
