@@ -50,7 +50,7 @@ client.on("message", message => {
     }
 
     if (dCount == 1) {
-      output = " Rolled 1d" + dVal + " and got a " + diceArr[0];
+      output = " Rolled 1d" + dVal + " and got a " + diceArr;
     }
     else {
       output = " Rolled " + dCount + "d" + dVal + " and got " + diceArr + " for a total of " + total;
