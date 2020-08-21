@@ -1,7 +1,10 @@
 class Dbg {
   dlog(data) {
-    //const caller = arguments.callee.caller.name;
-    //console.log("caller | " + caller + " data | " + data);
+    var caller = dlog.caller.name;
+    if (caller == null || caller == undefined || caller == "") {
+      caller = "Unknown";
+    }
+    console.log("caller | " + caller + " data | " + data);
     console.log(data);
   }
 }
