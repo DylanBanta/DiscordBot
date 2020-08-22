@@ -4,4 +4,4 @@ class Test {
   }
 }
 
-module.exports new Test();
+module.exports = new Test();
