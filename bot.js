@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 var Dice = require("tabletop-dice");
-var Dm = require("./discord-module.js");
+var Dm = require("./dm/mosules.js");
 var config = require("./config.json");
 var client = new Discord.Client();
 
