@@ -1,4 +1,4 @@
-class Test() {
+class Test {
   foo() {
     console.log("foo");
   }
