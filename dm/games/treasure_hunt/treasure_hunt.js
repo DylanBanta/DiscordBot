@@ -1,4 +1,4 @@
-var Treasure = require("treasure.js");
+var Treasure = require("./treasure.js");
 //var Rooms = require(".rooms.js");
 
 function treasureHunter() {
