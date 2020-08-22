@@ -1,3 +1,7 @@
-function foo() {
-  console.log("foo");
+class Test() {
+  foo() {
+    console.log("foo");
+  }
 }
+
+module.exports new Test();
