@@ -24,7 +24,7 @@ client.on("message", message => {
     var input = input.split(prefix)[1];
 
     if (input == "Debug") {
-      Dm.log("Foo Bar");
+      Dm.debug.log("Foo Bar");
     }
 
     if (input == "Save") {
