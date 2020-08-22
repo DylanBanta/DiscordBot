@@ -7,21 +7,21 @@ class Th { //Threasure Hunt Class
   test() {
     console.log("TrHunt");
     console.log(fs);
-    fs.writeFile("Test.txt", "Test"]);
+    fs.writeFile("Test.txt", "Test");
 
-  //var arr = Treasure.array();
+    //var arr = Treasure.array();
 
-  //var json = JSON.stringify(arr);
-  /*
-  //var Rooms = require(".rooms.js");
-  var Treasure = require("./treasure.js");
+    //var json = JSON.stringify(arr);
+    /*
+    //var Rooms = require(".rooms.js");
+    var Treasure = require("./treasure.js");
 
-  var treasureArr = Treasure.array();
-  for (var i = 0; i < treasureArr.length; i++) {
-    console.log("treasureArr[" + i + "] | " + treasureArr[i]);
+    var treasureArr = Treasure.array();
+    for (var i = 0; i < treasureArr.length; i++) {
+      console.log("treasureArr[" + i + "] | " + treasureArr[i]);
+    }
+    */
   }
-  */
-}
 }
 
 module.exports = new Th();
