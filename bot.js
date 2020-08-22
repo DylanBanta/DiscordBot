@@ -1,5 +1,4 @@
 const Discord = require("discord.js");
-const Dbg = require("./debug.js");
 const Dice = require("tabletop-dice");
 const Games = require("discord_games");
 const Util = require("utils");
