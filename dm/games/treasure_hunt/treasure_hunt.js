@@ -1,24 +1,26 @@
+//Requirements
 var Treasure = require("./treasure.js");
+var fs = require("fs");
 
-class TrHunt {
+class Th { //Threasure Hunt Class
 
   test() {
     console.log("TrHunt");
     var arr = Treasure.array();
-    for (var i = 0; i < arr.length; i++) {
-      console.log("arr[" + i + "] | " + arr[i]);
-      console.log(arr[i]);
-    }
-    /*
-    //var Rooms = require(".rooms.js");
-    var Treasure = require("./treasure.js");
+    var json = JSON.stringify(arr));
+  fs.writeFile("./treasure.json", arr);
+  console.log("TrHunt Exit");
 
-    var treasureArr = Treasure.array();
-    for (var i = 0; i < treasureArr.length; i++) {
-      console.log("treasureArr[" + i + "] | " + treasureArr[i]);
-    }
-    */
+  /*
+  //var Rooms = require(".rooms.js");
+  var Treasure = require("./treasure.js");
+
+  var treasureArr = Treasure.array();
+  for (var i = 0; i < treasureArr.length; i++) {
+    console.log("treasureArr[" + i + "] | " + treasureArr[i]);
   }
+  */
+}
 }
 
-module.exports = new TrHunt();
+module.exports = new Th();
