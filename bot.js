@@ -24,7 +24,7 @@ client.on("message", message => {
 
     if (input == "Debug") {
       Dm.debug.log("Test?");
-      Dm.th.test();
+      //TODO figure this out Dm.th.test();
     }
 
     if (input == "Save") {
