@@ -1,6 +1,8 @@
 const Discord = require("discord.js");
 const Dbg = require("./debug.js");
 const Dice = require("tabletop-dice");
+const Games = require("discord_games");
+const Util = require("utils");
 const config = require("./config.json");
 const client = new Discord.Client();
 
@@ -23,8 +25,14 @@ client.on("message", message => {
     var input = input.split(prefix)[1];
 
     if (input == "Debug") {
-      Dbg.dlog("Test");
+      //TODO debug
     }
+
+    if (input == "Save") {
+      Util.writeFile("./Test.txt", "Test Data");
+      message.reply("Saved Test Data.");
+    }
+
 
     //Check for Dice Roll Command
     dBool = input.includes("d");
