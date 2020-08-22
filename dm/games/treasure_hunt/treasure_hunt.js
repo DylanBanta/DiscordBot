@@ -6,11 +6,11 @@ class Th { //Threasure Hunt Class
 
   test() {
     console.log("TrHunt");
-    var arr = Treasure.array();
-    var json = JSON.stringify(arr);
-    fs.writeFile("./treasure.json", arr);
-    console.log("TrHunt Exit");
+    console.log(fs);
 
+    //var arr = Treasure.array();
+
+    //var json = JSON.stringify(arr);
     /*
     //var Rooms = require(".rooms.js");
     var Treasure = require("./treasure.js");
