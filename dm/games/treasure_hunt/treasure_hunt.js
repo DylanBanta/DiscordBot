@@ -7,7 +7,7 @@ class Th { //Threasure Hunt Class
   test() {
     console.log("TrHunt");
     console.log(fs);
-    fs.writeFile("Test.txt", "Test");
+    fs.writeFile("Test.txt", "Test Data", [encoding], [callback]);
 
     //var arr = Treasure.array();
 
