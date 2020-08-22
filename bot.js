@@ -23,7 +23,7 @@ client.on("message", message => {
     var input = input.split(prefix)[1];
 
     if (input == "Debug") {
-      Dm.Dbg.log("Test Data");
+      console.log(Dm);
     }
 
     if (input == "Save") {
