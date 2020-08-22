@@ -27,7 +27,7 @@ client.on("message", message => {
     }
 
     if (input == "Save") {
-      Util.writeFile("./Test.txt", "Test Data");
+      Dm.writeFile("./Test.txt", "Test Data");
       message.reply("Saved Test Data.");
     }
 
