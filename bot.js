@@ -1,9 +1,8 @@
 const Discord = require("discord.js");
-const Dice = require("tabletop-dice");
-const Games = require("discord_games");
-const Util = require("utils");
-const config = require("./config.json");
-const client = new Discord.Client();
+var Dice = require("tabletop-dice");
+var Dm = require("discord_module");
+var config = require("./config.json");
+var client = new Discord.Client();
 
 client.on("ready", () => {
   console.log("D&D Bot Has Rolled for Initiative"); //D&D bot is on
