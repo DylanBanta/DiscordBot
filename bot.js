@@ -23,7 +23,7 @@ client.on("message", message => {
     var input = input.split(prefix)[1];
 
     if (input == "Debug") {
-      //TODO debug
+      Dm.test();
     }
 
     if (input == "Save") {
