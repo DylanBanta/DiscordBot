@@ -23,7 +23,7 @@ client.on("message", message => {
     var input = input.split(prefix)[1];
 
     if (input == "Debug") {
-      Dm.treasure_hunter();
+      Dm.TrHunt.do();
     }
 
     if (input == "Save") {

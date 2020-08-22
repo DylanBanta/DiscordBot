@@ -1,9 +1,13 @@
-var Treasure = require("./treasure.js");
-//var Rooms = require(".rooms.js");
+class TrHunt {
+  do() {
+    //var Rooms = require(".rooms.js");
+    var Treasure = require("./treasure.js");
 
-function treasureHunter() {
-  var treasureArr = Treasure.array();
-  for (var i = 0; i < treasureArr.length; i++) {
-    console.log("treasureArr[" + i + "] | " + treasureArr[i]);
+    var treasureArr = Treasure.array();
+    for (var i = 0; i < treasureArr.length; i++) {
+      console.log("treasureArr[" + i + "] | " + treasureArr[i]);
+    }
   }
 }
+
+module.exports new TrHunt();
