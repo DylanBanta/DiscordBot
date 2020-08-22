@@ -4,10 +4,10 @@ class TrHunt {
 
   test() {
     console.log("TrHunt");
-
-
-    var goldChest = new Treasure("Coins", 600, "A treasure chest filled with gold coins");
-    console.log(goldChest);
+    var arr = Treasure.array();
+    for (var i = 0; i < arr.length; i++) {
+      console.log("arr[" + i + "] | " + arr[i]);
+    }
     /*
     //var Rooms = require(".rooms.js");
     var Treasure = require("./treasure.js");
