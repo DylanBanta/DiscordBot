@@ -1,4 +1,7 @@
+var Treasure = require("./treasure.js");
+
 class TrHunt {
+
   test() {
     console.log("TrHunt");
     /*
