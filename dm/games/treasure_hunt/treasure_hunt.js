@@ -1,5 +1,5 @@
 class TrHunt {
-  do() {
+  test() {
     //var Rooms = require(".rooms.js");
     var Treasure = require("./treasure.js");
 
