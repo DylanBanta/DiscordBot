@@ -10,4 +10,4 @@ class TrHunt {
   }
 }
 
-module.exports new TrHunt();
+module.exports = new TrHunt();
