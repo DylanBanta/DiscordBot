@@ -1,4 +1,4 @@
 module.exports = {
   test: require("./test.js"),
-  util: require("./utilIndex.js")
+  util: require("./utils/index.js")
 }
