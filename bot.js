@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 var Dice = require("tabletop-dice");
-var Dm = require("dnd");
+//var Dm = require("discord_module"); //TODO
 var config = require("./config.json");
 var client = new Discord.Client();
 
@@ -23,7 +23,7 @@ client.on("message", message => {
     var input = input.split(prefix)[1];
 
     if (input == "Debug") {
-      Dm.test("Test");
+      //TODO debug
     }
 
     if (input == "Save") {
