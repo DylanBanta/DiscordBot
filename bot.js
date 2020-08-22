@@ -23,11 +23,7 @@ client.on("message", message => {
     var input = input.split(prefix)[1];
 
     if (input == "Debug") {
-<<<<<<< HEAD
       Dm.test("Test");
-=======
-      Dm.Dbg.log("Test Data");
->>>>>>> parent of 12e030d... .
     }
 
     if (input == "Save") {
