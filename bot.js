@@ -16,7 +16,6 @@ client.on("message", message => {
   var dBool = false;
   var dOutput;
 
-
   console.log("input | " + input);
 
   if (input.startsWith(prefix)) {
@@ -24,7 +23,7 @@ client.on("message", message => {
     var input = input.split(prefix)[1];
 
     if (input == "Debug") {
-      Dm.debug.log("Foo Bar");
+      Dm.treasure_hunter();
     }
 
     if (input == "Save") {
