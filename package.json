@@ -9,7 +9,6 @@
   "dependencies": {
     "discord.js": "^11.1.0",
     "request": "2.81.0",
-    "tabletop-dice": "^1.0.2",
-    "dnd": "1.0.0"
+    "tabletop-dice": "^1.0.2"
   }
 }
