@@ -89,3 +89,5 @@ class Treasure {
     return treasureArray;
   }
 }
+
+module.exports = new Treasure();
