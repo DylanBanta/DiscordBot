@@ -4,4 +4,6 @@ class Debug {
   }
 }
 
+module.exports = new Debug();
+
 //TODO
