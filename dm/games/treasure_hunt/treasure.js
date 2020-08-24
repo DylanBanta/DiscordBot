@@ -74,7 +74,7 @@ class Treasure {
     //Unique Items
     var silverHolySymbol = new Treasure("Holy Symbol", 250, "A Silver Holy Symbol", "A Cleric Killed with this treasure will come back to life after 2 turns. The Cleric  will Know The Killer's identity.");
 
-    var excalibur = new Treasure("Holy Symbol", 250, "The Holy Sword Excalibur", "When in posession of The Paladin: Every player who was in the room with him during the Location Phase is targeted by his Holy Protector ability.");
+    var excalibur = new Treasure("Holy Symbol", 250, "The Holy Sword Excalibur", "When in posession of The Paladin: May Bless 1 additional player during The Lobby Phase.");
 
     var poison = new Treasure("Minion", 0, "A Vial of deadly poison", "Can only be discovered by The Minion, and The Minion cannot be caught Holding it. During the Night Phase, The Minion may Target 1 Player with The Poison, except The Killer. The Poison will then re-appear somewhere else in The Hotel.");
 

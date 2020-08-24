@@ -1,4 +1,8 @@
 //Requirements
+const mongoose = require("mongoose");
+//mongoose.connect(const uri = "mongodb://YourDnDDylan:<password>@discordbotcluster.khtsq.mongodb.net/<dbname>?retryWrites=true&w=majority")
+
+
 var Treasure = require("./treasure.js");
 var fs = require("fs");
 
