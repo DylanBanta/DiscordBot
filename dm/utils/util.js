@@ -1,3 +1,5 @@
+var Dice = require("tabletop-dice"); //Dice Roller from https://www.npmjs.com/package/tabletop-dice
+
 class Util {
   MessageHandler(message, prefix) {
     var user = message.member.displayName; //User who posted the message
@@ -7,11 +9,6 @@ class Util {
     if (input.startsWith(prefix)) { //Checks if the input begins witht he prefix, if so, seperates out prefix from the Command
       //Splits command after prefix. (input "!1" becomes "1");
       var input = input.split(prefix)[1];
-
-      if (input == "Debug") {
-        Dm.debug.log("Test?");
-        Dm.th.test();
-      }
 
       if (input == "Save") {
         //Dm.writeFile("./Test.txt", "Test Data");
