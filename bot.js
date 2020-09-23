@@ -1,5 +1,5 @@
 const Discord = require("discord.js"); //Discord API
-var Mods = require("./dm/modules.js"); //My Modules that are to be loaded into the bot. /dm/modules.js
+var Mods = require("./mods/modules.js"); //My Modules that are to be loaded into the bot. /dm/modules.js
 var config = require("./config.json"); //Config json file
 
 
@@ -13,7 +13,7 @@ client.on("ready", () => {
 
 //When the client detects a message
 client.on("message", message => {
-  Mods.util.MessageHandler(message);
+  Mods.util.MessageHandler(message); //Sends the message to the Message Handler util
 });
 
 //Logs in

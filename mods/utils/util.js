@@ -1,10 +1,11 @@
 var Dice = require("tabletop-dice"); //Dice Roller from https://www.npmjs.com/package/tabletop-dice
+var Npc = require("./npc.js");
 var config = require("/app/config.json"); //Config json file
 var fs = require("fs"); //Node File System
 
 class Util {
-  MessageHandler(message) {
-    var prefix = config.prefix;
+  MessageHandler(message) { //Handles incoming messages and executes appropriate commands
+    var prefix = config.prefix; //Prefix from config.json file
     var user = message.member.displayName; //User who posted the message
     var input = message.content; //Message content
     var dOutput; //Initialize the eventual output variable
@@ -16,6 +17,11 @@ class Util {
       if (input == "Save") {
         //Dm.writeFile("./Test.txt", "Test Data");
         //message.reply("Saved Test Data.");
+      }
+
+      if (input == "npc") {
+        this.log("New NPC");
+        Npc.new();
       }
 
       var dBool = false;
