@@ -15,7 +15,7 @@ client.on("ready", () => {
 
 //When the client detects a message
 client.on("message", message => {
-  Dm.messageHandler.messageHandler(message);
+  Dm.mh.MessageHandler(message);
 });
 
 //Logs in
