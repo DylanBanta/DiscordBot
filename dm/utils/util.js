@@ -1,5 +1,5 @@
 var Dice = require("tabletop-dice"); //Dice Roller from https://www.npmjs.com/package/tabletop-dice
-var config = require("./../config.json"); //Config json file
+var config = require("config.json"); //Config json file
 var fs = require("fs"); //Node File System
 
 class Util {
