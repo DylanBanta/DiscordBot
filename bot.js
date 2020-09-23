@@ -39,7 +39,7 @@ client.on("message", message => {
     //Check for Dice Roll Command
     dBool = input.includes("d");
     if (dBool) { //TODO make sure to only call this when actually rolling a die
-      dOutput = diceCommand(input);
+      dOutput = Dice.diceCommand(input);
       message.reply(dOutput);
     }
   }
