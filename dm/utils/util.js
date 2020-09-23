@@ -1,7 +1,6 @@
-class MH {
-  MessageHandler(message) {
+class Util {
+  MessageHandler(message, prefix) {
     var user = message.member.displayName; //User who posted the message
-    var prefix = config.prefix; //checks config file for command input prefix
     var input = message.content; //Message content
     var dOutput; //Initialize the eventual output variable
 
@@ -29,6 +28,10 @@ class MH {
       }
     }
   };
+
+  log(data) {
+    console.log(data);
+  }
 }
 
-module.exports = new MH();
+module.exports = new Util();
