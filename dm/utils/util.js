@@ -27,7 +27,7 @@ class Util {
         message.reply(dOutput);
       }
     }
-  };
+  }
 
   log(data) {
     console.log(data);
