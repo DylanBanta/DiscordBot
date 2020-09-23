@@ -1,7 +1,10 @@
 var Dice = require("tabletop-dice"); //Dice Roller from https://www.npmjs.com/package/tabletop-dice
+var config = require("./config.json"); //Config json file, contains data not to be loaded in plaintext. Included in .gitignore
+var fs = require("fs"); //Node File System
 
 class Util {
-  MessageHandler(message, prefix) {
+  MessageHandler(message) {
+    var prefix = config.prefix;
     var user = message.member.displayName; //User who posted the message
     var input = message.content; //Message content
     var dOutput; //Initialize the eventual output variable
@@ -14,7 +17,6 @@ class Util {
         //Dm.writeFile("./Test.txt", "Test Data");
         //message.reply("Saved Test Data.");
       }
-
 
       var dBool = false;
       //Check for Dice Roll Command
