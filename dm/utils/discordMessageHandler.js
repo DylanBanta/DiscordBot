@@ -1,4 +1,4 @@
-class MH() {
+class MH {
   MessageHandler(message) {
     var user = message.member.displayName; //User who posted the message
     var prefix = config.prefix; //checks config file for command input prefix
