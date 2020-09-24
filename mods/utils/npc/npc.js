@@ -1,5 +1,5 @@
-var Race = require("./npc/race.js");
-var Class = require("./npc/class.js");
+var Race = require("./race.js");
+var Class = require("./class.js");
 
 const abilityScoreNames = ["Strength", "Dexterity", "Constitution", "Inteligence", "Wisdom", "Charisma"];
 const shortAbilityScoreNames = ["STR", "DEX", "CON", "INT", "WIS", "CHA"];
