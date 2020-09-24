@@ -1,0 +1,127 @@
+
+
+  Level Up Weight Info | How it works
+
+
+
+If you want to create custom weights we need to create
+an object with each of the following
+
+
+var obj = {
+  largestWeight: INT //Must be >= 1, but higher is reccomended
+  weights: [INT, INT, INT, ...]
+  minMult: [INT, INT, INT, ...] // minMult.Length must = weights.length
+  maxDiv: [INT, INT, INT, ...] // maxDiv.Length must = weights.length
+};
+
+
+When determining level we need to define a max to a random number
+largest weight will determine the maximum random roll
+
+    largestWeight: 150,
+
+
+now we need to apply a weight to the random number
+the weight is basically your odds of a particular result
+to make this we need to create an array with several possible outcomes
+Something like this
+
+    weights: [50,100,125]
+
+
+with the data in the weights array
+we run a for loop (i)
+if the random roll is <= weights[i]
+the for loop breaks out and i = weight group
+
+Lest's assume when our random roll was a 50
+the first weight in the example weights array
+50 is <= than 50 so the for loop breaks
+saying that our weight group (i) is 0
+if we instead assume this time that our random roll was a 51
+then the for loop would pass the first weight, and see that
+51 <= 100 breaking out and saying that our weight group (i) is 1
+
+You can use this to make certain weight groups more or less common for
+a race.
+
+A few examples
+
+  Heavy Low Level Bias
+  largestWeight: 10,
+  weights: [8,9,10]
+
+  80% of our race will be in weight group 0
+  10% of our race will be in weight group 1
+  10% of our race will be in weight group 2
+
+  Heavy High Level Bias
+  largestWeight: 10,
+  weights: [1,2,10]
+
+  10% of our race will be in weight group 0
+  10% of our race will be in weight group 1
+  80% of our race will be in weight group 1
+
+  Mixed Level Bias
+  largestWeight: 100,
+  weights: [25, 89, 99, 100]
+
+  25% of our race will be in weight group 0
+  64% of our race will be in weight group 1
+  10% of our race will be in weight group 2
+  1% of our race will be in weight group 3
+
+
+
+Once we know our weight group we need to create 2 arrays that we
+can use to apply multipliers and dividers to the races minLvl and maxLvls
+Something like this
+
+  minMult: [1,2,10],
+  maxDiv: [10,5,1]
+
+
+From the previous data we know that our weight group can be made to be
+more or less rare based on which weight group their in. Now we need to
+effect why those rarities matter.
+The minMult[i] value will be multiplied with the minLvl value for the race
+1 is a common entry for minMult[i] as it will keep the default minimum level
+If minMult[i] > 1 && minLvl == 0 then sets minLvl = 1
+The same process happens to the maxLevel with maxDiv, except that we divide
+the maxLvl by the maxDiv
+
+our mixed level example from earlier would work out like this
+
+  Mixed Level Bias
+  minLvl: 1,
+  maxLvl: 20,
+  largestWeight: 100,
+  weights: [25, 89, 99, 100],
+  minMult: [1,2,10,20],
+  maxDiv: [10,5,1,1]
+
+  25% of our race will be in weight group 0
+    minLvl = 1
+      minLvl * minMult[0] || 1 * 1 = 1
+    maxLvl = 2
+      maxLvl = maxLvl / maxDiv[0] || 20 / 10 = 2
+
+  64% of our race will be in weight group 1
+    minLvl = 2
+      minLvl * minMult[1] || 1 * 2 = 2
+    maxLvl = 4
+      maxLvl = maxLvl / maxDiv[1] || 20 / 5 = 4
+
+  10% of our race will be in weight group 2
+    minLvl = 10
+      minLvl * minMult[2] || 1 * 10 = 10
+    maxLvl = 20
+      maxLvl / maxDiv[2] || 20 / 1 = 20
+
+  1% of our race will be in weight group 3
+    minLvl = 20
+      minLvl * minMult[3] || 1 * 20 = 20
+    maxLvl = 20
+      maxLvl / maxDiv[3] || 20 / 1 = 20
