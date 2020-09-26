@@ -30,4 +30,5 @@ class MessageHandler {
       }
     }
   }
-  module.exports = new MessageHandler();
+}
+module.exports = new MessageHandler();
