@@ -1,8 +1,51 @@
-var Util = require("/app/mods/utils/utils.js"); //Utils
+var Util = require("/app/mods/utils/util.js"); //Utils
 
-var defaultMaleLbsObj = {
+function getGender(ratio) {
+  switch (ratio) {
+    case -1:
+      return "Unknown";
+      break;
+    case 0:
+      return "Female";
+      break;
+    case 100:
+      return "Male";
+      break;
+    case null:
+    case undefined:
+    case "":
+      return "Error Invalid Inputs";
+      break;
+    default: //Does not match any pre-defined output
+      //Get Random Gender
+      var r = Util.rand(100);
+      console.log("r | " + r);
+      if (r < ratio) {
+        return "Male";
+      }
+      else {
+        return "Female";
+      }
 
-};
+      //Should Not Get Here. Return Error
+      return "Error";
+      break;
+  }
+}
+
+function getName(gender, maleNames, femaleNames) {
+  switch (this.gender) {
+    case "Male":
+      return Util.randFromArr(this.maleNames);
+      break;
+    case "Female":
+      return Util.randFromArr(this.femaleNames);
+      break;
+    default:
+      return "Error Determining Name";
+      break;
+  }
+}
 
 
 class Race {
@@ -14,51 +57,12 @@ class Race {
       racePlural: "", //Race Plural Name String
       maleNames: ["", ""], //Male Name String Arr
       femaleNames: ["", ""], //Female Name String Arr
-      genderRadio: 50, //Percentage of race born as male. 0 is always female, 100 is always male, -1 is unknown gender. Int
+      genderRatio: 50, //Percentage of race born as male. 0 is always female, 100 is always male, -1 is unknown gender. Int
       get gender() { //Returns one of the following Strings "Male", "Female", or "Unknown" based on gender ratio
-        switch (this.genderRatio) {
-          case -1:
-            return "Unknown";
-            break;
-          case 0:
-            return "Female";
-            break;
-          case 100:
-            return "Male";
-            break;
-          case null:
-          case undefined:
-          case "":
-            return "Error Invalid Inputs";
-            break;
-          default: //Does not match any pre-defined output
-            //Get Random Gender
-            var r = Util.rand(100);
-            console.log("r | " + r);
-            if (r < ratio) {
-              return "Male";
-            }
-            else {
-              return "Female";
-            }
-
-            //Should Not Get Here. Return Error
-            return "Error";
-            break;
-        }
+        getGender(this.genderRatio);
       },
       get name() { //Returns a name string from appropriate gender name array
-        switch (this.gender) {
-          case "Male":
-            return Util.randFromArr(this.maleNames);
-            break;
-          case "Female":
-            return Util.randFromArr(this.femaleNames);
-            break;
-          default:
-            return "Error Determining Name";
-            break;
-        }
+        return getName(this.gender, this.maleNames, this.femaleNames);
       },
       abilityAdjust: [0, 0, 0, 0, 0, 0], //Racial Adjustments to be applied after stats are assigned. Order : [STR, DEX, CON, INT, WIS, CHA], Excepts Positive and Negetive Int
       speed: 0, //Land Speed. Must be >= 0
