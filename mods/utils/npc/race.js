@@ -57,6 +57,7 @@ class Race {
   }
 
   defaultRace() {
+
     var race = {
       race: [""], //Race Name String Array.
       racePlural: "", //Race Plural Name String

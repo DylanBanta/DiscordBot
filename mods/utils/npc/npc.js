@@ -1,5 +1,6 @@
 var Race = require("./race.js");
 var Class = require("./class.js");
+var Util = require("/app/mods/utils/util.js"); //Utils
 
 const abilityScoreNames = ["Strength", "Dexterity", "Constitution", "Inteligence", "Wisdom", "Charisma"];
 const shortAbilityScoreNames = ["STR", "DEX", "CON", "INT", "WIS", "CHA"];
@@ -21,7 +22,18 @@ class Npc {
   }
 
   test() {
-    console.log(Race.defaultRace());
+    saveRace();
+  }
+
+  saveRace() {
+    var race = Race.defaultRace();
+    var data = JSON.stringify(race);
+    var fileLocation = "/app/mods/npc/";
+    var fileName = "defaultRace";
+    var ext = ".json";
+
+    Util.saveFile(fileLocation, fileName, ext, data);
+    console.log("saveRace() end");
   }
 }
 
