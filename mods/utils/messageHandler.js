@@ -19,7 +19,7 @@ class MessageHandler {
       }
 
       if (input == "npc") {
-        this.log("New NPC");
+        console.log("New NPC");
         Npc.test();
       }
 
