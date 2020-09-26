@@ -25,13 +25,14 @@ class Npc {
     var race = Race.defaultRace();
     console.log("race", race);
     console.log("gender", race.gender);
-    var data = JSON.stringify(race);
-    var fileLocation = "/app/mods/npc/";
-    var fileName = "defaultRace";
-    var ext = ".json";
+    console.log("level", race.level);
+    // var data = JSON.stringify(race);
+    // var fileLocation = "/app/mods/npc/";
+    // var fileName = "defaultRace";
+    // var ext = ".json";
 
-    Util.saveFile(fileLocation, fileName, ext, data);
-    console.log("saveRace() end");
+    //Util.saveFile(fileLocation, fileName, ext, data);
+    //console.log("saveRace() end");
   }
 }
 
