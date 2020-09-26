@@ -53,6 +53,8 @@ class Util {
 
   minMaxWeighted(weightObj) {
 
+    console.log("weightObj | " + weightObj);
+
     var minInput = weightObj.minInput;
     var maxOutput = weightObj.maxInput;
 
@@ -72,8 +74,6 @@ class Util {
       [minAdd, minSub, maxAdd, maxSub],
       [minMult, maxMult, minDiv, maxDiv]
     ];
-
-    console.log("minAdd | " + minAdd);
 
 
     var zeroArr;
