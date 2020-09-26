@@ -22,10 +22,6 @@ class Npc {
   }
 
   test() {
-    saveRace();
-  }
-
-  saveRace() {
     var race = Race.defaultRace();
     var data = JSON.stringify(race);
     var fileLocation = "/app/mods/npc/";
