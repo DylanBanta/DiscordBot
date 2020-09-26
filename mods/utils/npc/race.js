@@ -89,6 +89,8 @@ class Race {
           minMult: [1, 1, 1, 10, 20], //length must be = weights.length;
           maxDiv: [5, 4, 2, 1, 1] //length must be = weights.length;
         };
+
+        console.log("customWeights", customWeights);
         return Util.minMaxWeighted(customWeights);
       },
       minHeight: 1, //Minimum height in inches. Requires positive int
