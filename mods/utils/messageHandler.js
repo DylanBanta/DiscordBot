@@ -1,3 +1,5 @@
+var Npc = require("./npc/npc.js");
+var config = require("/app/config.json"); //Config json file
 var Dice = require("tabletop-dice"); //Dice Roller from https://www.npmjs.com/package/tabletop-dice
 
 class MessageHandler {

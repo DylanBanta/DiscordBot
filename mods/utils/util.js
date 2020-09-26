@@ -1,5 +1,3 @@
-var Npc = require("./npc/npc.js");
-var config = require("/app/config.json"); //Config json file
 var fs = require("fs"); //Node File System
 
 class Util {
