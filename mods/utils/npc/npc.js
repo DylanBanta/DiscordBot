@@ -23,7 +23,7 @@ class Npc {
 
   test() {
     var race = Race.defaultRace();
-    console.log("race | " + race);
+    console.log("race", race);
     // var data = JSON.stringify(race);
     // var fileLocation = "/app/mods/npc/";
     // var fileName = "defaultRace";
