@@ -102,7 +102,7 @@ class Util {
     //Math
     //get weightGroup
     var weightGroup;
-    var r = randPos(weights[weights.length - 1]); //Random number 1 to listMax
+    var r = this.randPos(weights[weights.length - 1]); //Random number 1 to listMax
 
     for (var l = 0; l < weights.length; l++) {
       if (r < weights[l]) {
@@ -160,7 +160,7 @@ class Util {
       finamMax += _max[m];
     }
 
-    return randBetween(finalMin, finamMax);
+    return this.randBetween(finalMin, finamMax);
 
   }
 
