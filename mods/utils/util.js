@@ -73,6 +73,8 @@ class Util {
       [minMult, maxMult, minDiv, maxDiv]
     ];
 
+    console.log("minAdd | " + minAdd);
+
 
     var zeroArr;
     var oneArr;
