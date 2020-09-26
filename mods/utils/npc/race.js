@@ -64,10 +64,10 @@ class Race {
       femaleNames: ["", ""], //Female Name String Arr
       genderRadio: 50, //Percentage of race born as male. 0 is always female, 100 is always male, -1 is unknown gender. Int
       get gender() { //Returns one of the following Strings "Male", "Female", or "Unknown" based on gender ratio
-        return this.getGender(this.genderRadio);
+        return getGender(this.genderRadio);
       },
       get name() { //Returns a name string from appropriate gender name array
-        return this.getName(this.gender, this.maleNames, this.femaleNames);
+        return getName(this.gender, this.maleNames, this.femaleNames);
       },
       abilityAdjust: [0, 0, 0, 0, 0, 0], //Racial Adjustments to be applied after stats are assigned. Order : [STR, DEX, CON, INT, WIS, CHA], Excepts Positive and Negetive Int
       speed: 0, //Land Speed. Must be >= 0
