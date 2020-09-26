@@ -7,8 +7,7 @@ var defaultMaleLbsObj = {
 
 class Race {
 
-  getGender() {
-    var ratio = this.genderRadio;
+  getGender(ratio) {
 
     switch (ratio) {
       case -1:
