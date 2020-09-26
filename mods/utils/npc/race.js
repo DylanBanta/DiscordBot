@@ -1,4 +1,4 @@
-var Util = require("/app/mods/utils/util.js"); //Utils
+var Util = require("/app/mods/utils/utils.js"); //Utils
 
 var defaultMaleLbsObj = {
 
