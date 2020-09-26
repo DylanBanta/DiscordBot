@@ -59,7 +59,7 @@ class Race {
       femaleNames: ["", ""], //Female Name String Arr
       genderRatio: 50, //Percentage of race born as male. 0 is always female, 100 is always male, -1 is unknown gender. Int
       get gender() { //Returns one of the following Strings "Male", "Female", or "Unknown" based on gender ratio
-        getGender(this.genderRatio);
+        return getGender(this.genderRatio);
       },
       get name() { //Returns a name string from appropriate gender name array
         return getName(this.gender, this.maleNames, this.femaleNames);
