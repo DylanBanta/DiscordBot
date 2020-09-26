@@ -80,7 +80,7 @@ class Util {
     //Check all mathArr is correct length
     for (var i = 0; i < mathArr.length; i++) {
       for (var j = 0; j < mathArr[i].length; j++) {
-        if (mathArr[i][j].length != weights.length) { //If incorrect length set to default based on weights.length
+        if (mathArr[i][j] == undefined || mathArr[i][j] == null) { //If incorrect length set to default based on weights.length
           if (i == 0) {
             zeroArr = [];
             for (var k = 0; k < weights.length; k++) {
