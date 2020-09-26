@@ -71,39 +71,47 @@ class Util {
     var minDiv = weightObj.minDiv;
     var maxDiv = weightObj.maxDiv;
 
-    var mathArr = [
-      [minAdd, minSub, maxAdd, maxSub],
-      [minMult, maxMult, minDiv, maxDiv]
-    ];
+    if (weights.length < 1) {
+      console.log("Big error!");
+    }
 
+    if (minAdd == null || undefined) {
 
-    var zeroArr;
-    var oneArr;
+    }
 
-    //TODO something is wrong in the next comment block
-    //I was trying to automatically fill arrays
-
-    //Check all mathArr is correct length
-    // for (var i = 0; i < mathArr.length; i++) {
-    //   for (var j = 0; j < mathArr[i].length; j++) {
-    //     if (mathArr[i][j] == undefined || mathArr[i][j] == null) { //If incorrect length set to default based on weights.length
-    //       if (i == 0) {
-    //         zeroArr = [];
-    //         for (var k = 0; k < weights.length; k++) {
-    //           zeroArr.push(0);
-    //         }
-    //         mathArr[i][j] = zeroArr;
-    //       }
-    //       else if (i == 1) {
-    //         oneArr = [];
-    //         for (var k = 0; k < weights.length; k++) {
-    //           oneArr.push(1);
-    //         }
-    //         mathArr[i][j] = oneArr;
-    //       }
-    //     }
-    //   }
-    // }
+    // var mathArr = [
+    //   [minAdd, minSub, maxAdd, maxSub],
+    //   [minMult, maxMult, minDiv, maxDiv]
+    // ];
+    //
+    //
+    // var zeroArr;
+    // var oneArr;
+    //
+    // //TODO something is wrong in the next comment block
+    // //I was trying to automatically fill arrays
+    //
+    // //Check all mathArr is correct length
+    // // for (var i = 0; i < mathArr.length; i++) {
+    // //   for (var j = 0; j < mathArr[i].length; j++) {
+    // //     if (mathArr[i][j] == undefined || mathArr[i][j] == null) { //If incorrect length set to default based on weights.length
+    // //       if (i == 0) {
+    // //         zeroArr = [];
+    // //         for (var k = 0; k < weights.length; k++) {
+    // //           zeroArr.push(0);
+    // //         }
+    // //         mathArr[i][j] = zeroArr;
+    // //       }
+    // //       else if (i == 1) {
+    // //         oneArr = [];
+    // //         for (var k = 0; k < weights.length; k++) {
+    // //           oneArr.push(1);
+    // //         }
+    // //         mathArr[i][j] = oneArr;
+    // //       }
+    // //     }
+    // //   }
+    // // }
 
     //Math
     //get weightGroup
