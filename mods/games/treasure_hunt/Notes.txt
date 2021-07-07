@@ -1,0 +1,123 @@
+Treasure Hunt Notes
+
+Mechanics
+
+Location Mechanics
+	Local Chat
+	Treasure Locations
+	Secret Passageways
+		Connects to 2 rooms. Players in Secret Passageways can target players in either room for Spot Based Treasure Mechanics and count as if they were in the room for Class Mechanics
+
+Treasure Mechanics
+	Search Treasure
+	Hold Treasure
+	Hide Treasure
+	Steal Treasure
+	Spot Hide
+	Spot Hold
+	Spot Steal
+
+Class Mechanics
+	Kill Player - Killer
+	Survive Killer - Barbarian, Fighter
+	Protect Player - Fighter, Paladin
+	Investigate Player - Druid, Ranger, Rogue
+	Copy Player - Druid
+	Intentional Death - Bard
+	2x Votes - Monk
+	Know Player's Roll - Killer, Minion, Sorcerer, Wizard
+
+Race Mechanics
+	Human - +1 Search, +1 Hold, +1 Hide, +1 Steal, +1 Spot Hide, +1 Spot Hold
+	Dwarf - +6 Search, +0 Hold, +0 Hide, +0 Steal, +0 Spot Hide, +0 Spot Hold
+	Elf - Automatically Detect Secret Passageways +0 All
+	Half-Elf - +2 Search, +2 Hold, +0 Hide, +0 Steal, +1 Spot Hide, +1 Spot Hold
+	Gnome - +0 Search, +4 Hold, +0 Hide, +1 Steal, +0 Spot Hide, +1 Spot Hold
+	Half-Orc - +2 Search, +2 Hold, +0 Hide, +2 Steal, +0 Spot Hide, +0 Spot Hold
+	Halfling - +0 Search, +0 Hold, +0 Hide, +6 Steal, +0 Spot Hide, +0 Spot Hold
+
+The Gameplay
+	Players Are in a haunted hotel searching for unique treasure/items
+	The Items the player's need are in different locations
+	Once the player's have found all of their items, they leave the game and win (cannot be killed or voted)
+	The Killer Wins if 50% of the non-killer player's die
+
+Turns
+	Lobby/Vote Phase
+		First Turn Only
+			Skip Lobby Phase
+		After First Turn
+			All Players Gather In Lobby
+			All Players Learn of any Dead Bodies and their Location last Location Phase
+				//TODO Do something with dead peoples treasure
+			Players Have 1 Minute To Discuss Followed by 45 Seconds to Vote
+				If 51% or more of the vote is for 1 target, that target is killed and their identity revealed
+	Transition Phase
+		Players are given 15 seconds to choose a location
+	Location Phase
+		Player's all go to their chosen location
+		Players Have a Local Chat in that Location for 2 Mintues
+			During That Time Players Must choose 1 of the following actions
+				Search
+					Players Roll a Search Check
+					Searches the room for Treasure
+						If Treasure is Found rolls Slight of Hand check to hide it on their person
+					Searches the room for Secret Passageways
+				Hide
+					Players Roll a Slight of Hand Check
+					Hides 1 Piece of Treasure You Have Somewhere in this room
+				Spot
+					Players Roll a Spot Check
+					Spots players hiding treasure on their person
+					Spots Players hiding treasure in this room
+				Steal
+					Players Roll a Slight of Hand Check
+					Steals Treasure from a target player in the same room as them. +10 to roll if you already Spotted them hiding treasure on their person.
+		Night Phase
+		Killer Targets 1 Player to kill, get all treasure from victims
+		Cleric Targets 1 Player to save
+		Druid Targets 1 Player to copy roles from
+		Fighter Targets 1 Player to protect themselves from
+		Paladin Targets 1 Player to save
+		Ranger Learns 1 Random Player's Identity
+		Rogue Targets 1 Player Learns Identity
+
+
+
+
+The Hotel Layout
+	The Lobby
+	The Kitchen
+	The Dining Hall
+	The Basement
+	The Attic
+	The Guest's Rooms
+	The Secret Passageways
+
+
+Race Rolls
+	Human - +1 Search, +1 Spot, +1 Slight of Hand
+	Dwarf - +4 Search -1 Slight of Hand
+	Elf - +4 Spot, Automatically Discover's Secret Passageways
+	Half-Elf - +2 Spot, +4 Search when discovering Secret Passageways
+	Gnome - +2 Search +2 Slight of Hand for Hiding Treasure on your Person
+	Half-Orc -
+	Halfling - +4 Slight of Hand for Stealing from another player -1 Search
+
+Class Roles
+	The Killer - Targets 1 player who they were in the room with during Location Phase each night to kill Knows the identity of The Minion
+	The Barbarian - Survives 1 attack from The Killer Does not learn the killer's Identity
+	The Bard - Wins the game if they die. If The Killer wins, and the Bard Dies, both win If The Killer loses, and The Bard dies, only The Bard wins. The Bard Cannot Win by gathering treasure, but can still gather as much as they like.
+	The Cleric - Targets 1 player who they were in the room with during Location Phase each night to save from The Killer (The Cleric may choose themselves as a target once every 2 turns). Does not learn the Killer's Identity.
+	The Druid - On the First Night, Targets 1 player and copies their role Target player does not know their roll has been copied.
+	The Fighter - Target 1 player who they were in the room with during Location Phase each night If target player attempts to kill The Fighter, The Killer fails, and the fighter learns their identity
+	The Monk - Votes to kill during Lobby Phase are counted twice
+	The Paladin - Holy Protector - Target 1 player each night to save from The Killer (The Paladin may not choose themselves as a target). Does not Learn The Killer's Identity
+	The Ranger - Learns The Identity of 1 random player each night
+	The Rogue - Target 1 player each night, and learn their role
+	The Sorcerer - Only Spawns if there is a Wizard Knows the identity of The Wizard
+	The Wizard - Only Spawns if there is a Sorcerer Knows the identity of The Sorcerer
+	The Minion - Knows the identity of the killer Wins if the killer wins
+
+	Multiple Possible Class Roles?
+	Example Rogue gets Grave Robber, can loot treasure from dead bodies

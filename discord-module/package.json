@@ -1,0 +1,11 @@
+{
+  "name": "discord-module",
+  "main": "discord-module.js",
+  "version": "1.0.0",
+  "description": "My custom module for Discord",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Dylan Banta",
+  "license": "ISC"
+}
